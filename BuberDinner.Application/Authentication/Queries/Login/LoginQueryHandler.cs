@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using BuberDinner.Application.Common.Errors;
+using BuberDinner.Application.Common.Interfaces.Authentication;
+using BuberDinner.Application.Common.Interfaces.Persistence;
+using BuberDinner.Application.Services.Authentication;
+using BuberDinner.Domain.Entities;
+using ErrorOr;
+using MediatR;
+using BuberDinner.Domain.Common.Errors;
+using BuberDinner.Application.Authentication.Common;
+
+
+namespace BuberDinner.Application.Authentication.Commands.Register
+{
+    public class LoginQueryHandler : IRequestHandler<RegisterCommand, ErrorOr <AuthenticationResult>>
+    {
+         private readonly IJwtTokenGenerator _jwtTokenGenerator ;
+
+        private readonly IUserRepository _userRepository;
+
+        public LoginQueryHandler(IJwtTokenGenerator jwtTokenGenerator,IUserRepository userRepository)
+        {
+            _jwtTokenGenerator = jwtTokenGenerator; 
+            _userRepository = userRepository;
+        }
+
+        public async Task<ErrorOr <AuthenticationResult>> Handle(RegisterCommand query, CancellationToken cancellationToken)
+        {
+
+             //1 chercher si le user existe 
+            if (_userRepository.GetUserByEmail(query.Email) is not User user)
+                    return Errors.Authentication.InvalidCredentials; 
+
+            if (user.Password != query.Password)
+                    return Errors.Authentication.InvalidCredentials; 
+
+            
+            var token = _jwtTokenGenerator.GenerateToken(user);
+            return new AuthenticationResult(
+               user ,
+                token);
+            
+        }
+    }
+}

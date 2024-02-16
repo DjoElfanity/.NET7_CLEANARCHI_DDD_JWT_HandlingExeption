@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8xspNopOiEfHoLxAqFWwxWNgN8TMc0CRyoWvkwiFSQ2FdY1gFohbIu1UXhs/iW0UpjZCk8WSpztzagfUXsmsXw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Domain\\BuberDinner.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\erroror\\1.10.0\\erroror.1.10.0.nupkg.sha512"
+  ],
+  "logs": []
+}

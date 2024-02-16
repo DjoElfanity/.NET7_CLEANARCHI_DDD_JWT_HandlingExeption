@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "rqUAbmHwkhjCuBRuI9K/9iUm5NKqTpyRFuxXmpOavrMhMRydFxLIzCXySeohIokLfWJONRsNo5glZKbWeG3ENg==",
+  "dgSpecHash": "EBKmk46a4bUUfvOEKLvkbk+srhr25uAmyRAyRECjWmssQXuwZ89Ae5QKPa6bvgr8YHDFA0wXIwmcWJmZYU7M4Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\erroror\\1.10.0\\erroror.1.10.0.nupkg.sha512",
     "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\fluentresults\\3.15.2\\fluentresults.3.15.2.nupkg.sha512",
+    "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

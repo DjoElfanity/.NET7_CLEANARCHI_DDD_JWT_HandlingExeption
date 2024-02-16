@@ -3,6 +3,7 @@ using BuberDinner.Application;
 using BuberDinner.Infrastructure ;
 using BuberDinner.Api.MiddleWare;
 using BuberDinner.Api.Filters;
+using dotnet_test.Mapping;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,8 @@ builder.Services.AddInfrastructure(builder.Configuration);
 
 // Ajout des services au conteneur.
 builder.Services.AddControllers();
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
 // CECI AUSSI POUR LE FILTER ET GESTION ERREUR
 //builder.Services.AddControllers(options => options.Filters.Add<ErrorHandlingErrorMiddleware>());
 // ON BOUGE CETTE PARTI DU CODE DANS LE DEPENDENCY INJECTION
@@ -33,6 +36,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 
 app.UseHttpsRedirection();
 app.UseAuthorization();

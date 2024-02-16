@@ -15,7 +15,7 @@ using BuberDinner.Application.Authentication.Common;
 
 namespace BuberDinner.Application.Authentication.Commands.Register
 {
-    public class LoginQueryHandler : IRequestHandler<RegisterCommand, ErrorOr <AuthenticationResult>>
+    public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr <AuthenticationResult>>
     {
          private readonly IJwtTokenGenerator _jwtTokenGenerator ;
 
@@ -27,7 +27,7 @@ namespace BuberDinner.Application.Authentication.Commands.Register
             _userRepository = userRepository;
         }
 
-        public async Task<ErrorOr <AuthenticationResult>> Handle(RegisterCommand query, CancellationToken cancellationToken)
+        public async Task<ErrorOr <AuthenticationResult>> Handle(LoginQuery query, CancellationToken cancellationToken)
         {
 
              //1 chercher si le user existe 
@@ -39,7 +39,7 @@ namespace BuberDinner.Application.Authentication.Commands.Register
 
             
             var token = _jwtTokenGenerator.GenerateToken(user);
-            return new AuthenticationResult(
+            return  new AuthenticationResult(
                user ,
                 token);
             

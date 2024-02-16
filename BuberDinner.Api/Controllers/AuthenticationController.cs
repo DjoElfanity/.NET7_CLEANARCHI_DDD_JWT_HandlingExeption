@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using BuberDinner.Application.Authentication.Commands;
 using BuberDinner.Application.Authentication.Common;
 using BuberDinner.Application.Services.Authentication;
@@ -20,10 +21,12 @@ namespace BuberDinner.Api.Controllers
         // private readonly IAuthenticationQueryService _authenticationQueryService;
 
         private readonly IMediator _mediator ;
+        private readonly IMapper _mapper; 
 
-        public AuthenticationController(IMediator mediator)
+        public AuthenticationController(IMediator mediator , IMapper mapper) 
         {
             _mediator = mediator;
+            _mapper = mapper; 
         }
 
         // public AuthenticationController(IAuthenticationCommandService authenticationCommandService , IAuthenticationQueryService authenticationQueryService)
@@ -35,7 +38,7 @@ namespace BuberDinner.Api.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterRequest request)
         {
-            var command = new RegisterCommand(request.FirstName , request.LastName , request.Email , request.Password);
+            var command = _mapper.Map<RegisterCommand>(request);
             ErrorOr<AuthenticationResult> authResult =  await  _mediator.Send(command);
       
             return authResult.Match(
@@ -49,7 +52,7 @@ namespace BuberDinner.Api.Controllers
         [HttpPost("login")]
         public async Task <IActionResult> Login(LoginRequest request)
         {
-            var query = new LoginQuery(request.Email , request.Password);
+            var query = _mapper.Map<LoginQuery>(request);
             ErrorOr<AuthenticationResult> authResult = await _mediator.Send(query);
             
 

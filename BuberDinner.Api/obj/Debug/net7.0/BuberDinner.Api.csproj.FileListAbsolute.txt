@@ -58,3 +58,6 @@ C:\Users\Jad.EL-FANITY\OneDrive - Akkodis\Desktop\DOT NET\CleanArchitecture_DDD\
 C:\Users\Jad.EL-FANITY\OneDrive - Akkodis\Desktop\DOT NET\CleanArchitecture_DDD\BuberDinner\BuberDinner.Api\bin\Debug\net7.0\FluentValidation.dll
 C:\Users\Jad.EL-FANITY\OneDrive - Akkodis\Desktop\DOT NET\CleanArchitecture_DDD\BuberDinner\BuberDinner.Api\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
 C:\Users\Jad.EL-FANITY\OneDrive - Akkodis\Desktop\DOT NET\CleanArchitecture_DDD\BuberDinner\BuberDinner.Api\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Jad.EL-FANITY\OneDrive - Akkodis\Desktop\DOT NET\CleanArchitecture_DDD\BuberDinner\BuberDinner.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Jad.EL-FANITY\OneDrive - Akkodis\Desktop\DOT NET\CleanArchitecture_DDD\BuberDinner\BuberDinner.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Jad.EL-FANITY\OneDrive - Akkodis\Desktop\DOT NET\CleanArchitecture_DDD\BuberDinner\BuberDinner.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

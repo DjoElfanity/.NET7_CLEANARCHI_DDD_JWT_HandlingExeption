@@ -39,7 +39,7 @@ namespace BuberDinner.Infrastructure.Authentication
             {
              new Claim(JwtRegisteredClaimNames.Sub , user.Id.ToString()),
              new Claim(JwtRegisteredClaimNames.GivenName , user.FirstName  ),
-             new Claim(JwtRegisteredClaimNames.FamilyName , user.Lastname  ) , 
+             new Claim(JwtRegisteredClaimNames.FamilyName , user.Lastname  ) ,  
              new Claim(JwtRegisteredClaimNames.Jti , Guid.NewGuid().ToString()  )  
 
 
@@ -47,6 +47,7 @@ namespace BuberDinner.Infrastructure.Authentication
 
           var securityToken = new JwtSecurityToken(
             issuer :_jwtSettings.Issuer,
+            audience: _jwtSettings.Audience,
             expires : _dateTimeProvider.UtcNow.AddMinutes(_jwtSettings.ExpiryMinutes),
             claims : claims , 
             signingCredentials : signinCredentials

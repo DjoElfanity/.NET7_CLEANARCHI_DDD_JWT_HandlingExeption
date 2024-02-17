@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Contracts\\BuberDinner.Contracts.csproj": {}
+    "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Contracts\\BuberDinner.Contracts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Contracts\\BuberDinner.Contracts.csproj": {
+    "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Contracts\\BuberDinner.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Contracts\\BuberDinner.Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Contracts\\BuberDinner.Contracts.csproj",
         "projectName": "BuberDinner.Contracts",
-        "projectPath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Contracts\\BuberDinner.Contracts.csproj",
-        "packagesPath": "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Contracts\\obj\\",
+        "projectPath": "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Contracts\\BuberDinner.Contracts.csproj",
+        "packagesPath": "C:\\Users\\KOROS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jad.EL-FANITY\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\KOROS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

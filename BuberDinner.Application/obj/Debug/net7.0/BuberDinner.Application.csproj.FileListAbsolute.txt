@@ -13,3 +13,18 @@ C:\Users\Jad.EL-FANITY\OneDrive - Akkodis\Desktop\DOT NET\CleanArchitecture_DDD\
 C:\Users\Jad.EL-FANITY\OneDrive - Akkodis\Desktop\DOT NET\CleanArchitecture_DDD\BuberDinner\BuberDinner.Application\bin\Debug\net7.0\BuberDinner.Domain.pdb
 C:\Users\Jad.EL-FANITY\OneDrive - Akkodis\Desktop\DOT NET\CleanArchitecture_DDD\BuberDinner\BuberDinner.Application\obj\Debug\net7.0\BuberDinner.Application.csproj.AssemblyReference.cache
 C:\Users\Jad.EL-FANITY\OneDrive - Akkodis\Desktop\DOT NET\CleanArchitecture_DDD\BuberDinner\BuberDinner.Application\obj\Debug\net7.0\BuberDinner.Application.csproj.CopyComplete
+C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Application\bin\Debug\net7.0\BuberDinner.Application.deps.json
+C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Application\bin\Debug\net7.0\BuberDinner.Application.dll
+C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Application\bin\Debug\net7.0\BuberDinner.Application.pdb
+C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Application\bin\Debug\net7.0\BuberDinner.Domain.dll
+C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Application\bin\Debug\net7.0\BuberDinner.Domain.pdb
+C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Application\obj\Debug\net7.0\BuberDinner.Application.csproj.AssemblyReference.cache
+C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Application\obj\Debug\net7.0\BuberDinner.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Application\obj\Debug\net7.0\BuberDinner.Application.AssemblyInfoInputs.cache
+C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Application\obj\Debug\net7.0\BuberDinner.Application.AssemblyInfo.cs
+C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Application\obj\Debug\net7.0\BuberDinner.Application.csproj.CoreCompileInputs.cache
+C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Application\obj\Debug\net7.0\BuberDinner.Application.csproj.CopyComplete
+C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Application\obj\Debug\net7.0\BuberDinner.Application.dll
+C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Application\obj\Debug\net7.0\refint\BuberDinner.Application.dll
+C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Application\obj\Debug\net7.0\BuberDinner.Application.pdb
+C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Application\obj\Debug\net7.0\ref\BuberDinner.Application.dll

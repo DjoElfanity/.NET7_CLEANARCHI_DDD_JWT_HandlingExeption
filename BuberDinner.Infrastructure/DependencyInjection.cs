@@ -53,7 +53,7 @@ namespace BuberDinner.Infrastructure
                     ValidateLifetime = true , 
                     ValidateIssuerSigningKey = true ,
                     ValidIssuer = JwtSettings.Issuer,
-                    //ValidAudience = JwtSettings.Audience,
+                    ValidAudience = JwtSettings.Audience,
                     IssuerSigningKey = new SymmetricSecurityKey(
                        Encoding.UTF8.GetBytes(JwtSettings.Secret)
  

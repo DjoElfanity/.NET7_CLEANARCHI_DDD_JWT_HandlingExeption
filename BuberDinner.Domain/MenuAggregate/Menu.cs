@@ -22,9 +22,9 @@ namespace BuberDinner.Domain.Menu
 
 
 
-        IReadOnlyList<MenuItem> Sections => (IReadOnlyList<MenuItem>)_sections.ToList();
-        IReadOnlyList<MenuItem> DinnerIds => (IReadOnlyList<MenuItem>)_dinnerIds.ToList();
-        IReadOnlyList<MenuItem> MenuReviewIds => (IReadOnlyList<MenuItem>)_menuReviewIds.ToList();
+        IReadOnlyList<MenuSection> Sections => _sections.ToList();
+        IReadOnlyList<DinnerId> DinnerIds => _dinnerIds.ToList();
+        IReadOnlyList<MenuReviewId> MenuReviewIds =>_menuReviewIds.ToList();
 
         public DateTime CreatedDateTime {get;}
         public DateTime UpdatedDateTime {get;}

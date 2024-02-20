@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 using AutoMapper;
 using BuberDinner.Application.Authentication.Commands;
 using BuberDinner.Application.Authentication.Common;
-using BuberDinner.Application.Services.Authentication;
+// using BuberDinner.Application.Services.Authentication;
 using BuberDinner.Contracts.Authentication;
 using ErrorOr;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BuberDinner.Api.Controllers
@@ -35,7 +36,9 @@ namespace BuberDinner.Api.Controllers
         //     _authenticationQueryService  = authenticationQueryService ; 
         // }
 
+        
         [HttpPost("register")]
+        [AllowAnonymous]
         public async Task<IActionResult> Register(RegisterRequest request)
         {
             var command = _mapper.Map<RegisterCommand>(request);
@@ -47,7 +50,7 @@ namespace BuberDinner.Api.Controllers
             );    
 
         }
-
+        [AllowAnonymous]
        
         [HttpPost("login")]
         public async Task <IActionResult> Login(LoginRequest request)

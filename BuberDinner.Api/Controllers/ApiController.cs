@@ -11,9 +11,10 @@ namespace BuberDinner.Api.Controllers
 {
      [ApiController]
     // [AllowAnonymous]
+    [Authorize]
     public class ApiController : ControllerBase
     {
-        [AllowAnonymous]
+        // [AllowAnonymous]
         protected IActionResult Problem(List<Error> errors)
         {
             if (errors.Count is 0) return Problem();
@@ -27,7 +28,7 @@ namespace BuberDinner.Api.Controllers
             return Problem(firstError);
         }
 
-        [AllowAnonymous]
+        // [AllowAnonymous]
 
         private IActionResult Problem(Error firstError)
         {
@@ -42,7 +43,7 @@ namespace BuberDinner.Api.Controllers
 
             return Problem(statusCode: statusCode, title: firstError.Description);
         }
-        [AllowAnonymous]
+        // [AllowAnonymous]
         private IActionResult ValidationProblem(List<Error> errors)
         {
             var modelStateDictionary = new ModelStateDictionary();

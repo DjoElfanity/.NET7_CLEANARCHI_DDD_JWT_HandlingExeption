@@ -34,13 +34,22 @@ namespace BuberDinner.Application.Authentication.Commands.Register
             {
                 return Errors.User.DuplicateEmail; 
             }
-            var user = new User
-            {
-                FirstName = command.FirstName, 
-                Lastname = command.LastName ,
-                Email = command.Email , 
-                Password = command.Password 
-            };
+            // var user = User.
+            // {
+                
+            //     FirstName = command.FirstName, 
+            //     Lastname = command.LastName ,
+            //     Email = command.Email , 
+            //     Password = command.Password 
+            // };
+
+            var user = User.Create(
+                command.FirstName,
+                command.LastName,
+                command.Email,
+                command.Password
+);
+
 
             _userRepository.Add(user);
             var token = _jwtTokenGenerator.GenerateToken(user);

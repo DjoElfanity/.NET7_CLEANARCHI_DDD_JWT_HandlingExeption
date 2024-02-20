@@ -67,7 +67,7 @@ namespace BuberDinner.Api.Controllers
          public static AuthenticationResponse MapAuthResult(AuthenticationResult authResult)
             {
                 return new AuthenticationResponse(
-                                authResult.User.Id,
+                                authResult.User.Id.Value,
                                 authResult.User.FirstName,
                                 authResult.User.Lastname,
                                 authResult.User.Email,

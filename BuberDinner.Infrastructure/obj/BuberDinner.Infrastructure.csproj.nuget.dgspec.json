@@ -1,35 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Infrastructure\\BuberDinner.Infrastructure.csproj": {}
+    "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Infrastructure\\BuberDinner.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Application\\BuberDinner.Application.csproj": {
+    "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Application\\BuberDinner.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj",
         "projectName": "BuberDinner.Application",
-        "projectPath": "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Application\\BuberDinner.Application.csproj",
-        "packagesPath": "C:\\Users\\KOROS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Application\\obj\\",
+        "projectPath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj",
+        "packagesPath": "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\KOROS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Jad.EL-FANITY\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Domain\\BuberDinner.Domain.csproj": {
-                "projectPath": "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Domain\\BuberDinner.Domain.csproj"
+              "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Domain\\BuberDinner.Domain.csproj": {
+                "projectPath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Domain\\BuberDinner.Domain.csproj"
               }
             }
           }
@@ -93,28 +91,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Domain\\BuberDinner.Domain.csproj": {
+    "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Domain\\BuberDinner.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Domain\\BuberDinner.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Domain\\BuberDinner.Domain.csproj",
         "projectName": "BuberDinner.Domain",
-        "projectPath": "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Domain\\BuberDinner.Domain.csproj",
-        "packagesPath": "C:\\Users\\KOROS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Domain\\BuberDinner.Domain.csproj",
+        "packagesPath": "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\KOROS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Jad.EL-FANITY\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -154,36 +150,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Infrastructure\\BuberDinner.Infrastructure.csproj": {
+    "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Infrastructure\\BuberDinner.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Infrastructure\\BuberDinner.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Infrastructure\\BuberDinner.Infrastructure.csproj",
         "projectName": "BuberDinner.Infrastructure",
-        "projectPath": "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Infrastructure\\BuberDinner.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\KOROS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Infrastructure\\BuberDinner.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\KOROS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Jad.EL-FANITY\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Application\\BuberDinner.Application.csproj": {
-                "projectPath": "C:\\Users\\KOROS\\Desktop\\JAD\\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\\BuberDinner.Application\\BuberDinner.Application.csproj"
+              "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj": {
+                "projectPath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj"
               }
             }
           }
@@ -235,7 +229,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ErrorOr;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace BuberDinner.Api.Controllers
 {
      [ApiController]
+    // [AllowAnonymous]
     public class ApiController : ControllerBase
     {
+        [AllowAnonymous]
         protected IActionResult Problem(List<Error> errors)
         {
             if (errors.Count is 0) return Problem();
@@ -23,6 +26,8 @@ namespace BuberDinner.Api.Controllers
             var firstError = errors[0];
             return Problem(firstError);
         }
+
+        [AllowAnonymous]
 
         private IActionResult Problem(Error firstError)
         {
@@ -37,7 +42,7 @@ namespace BuberDinner.Api.Controllers
 
             return Problem(statusCode: statusCode, title: firstError.Description);
         }
-
+        [AllowAnonymous]
         private IActionResult ValidationProblem(List<Error> errors)
         {
             var modelStateDictionary = new ModelStateDictionary();

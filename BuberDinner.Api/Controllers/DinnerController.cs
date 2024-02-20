@@ -15,7 +15,8 @@ namespace BuberDinner.Api.Controllers
         [HttpGet]
         public IActionResult ListDinner()
         {
-            return Ok(Array.Empty<string>());
+            //return Ok(Array.Empty<string>());
+            return Ok("ok");
         }
     }
 }

@@ -9,17 +9,35 @@ namespace BuberDinner.Domain.Menu.Entities
 {
     public sealed class MenuItem : Entity<MenuItemId>
     {
-        private MenuItem(MenuItemId menuItemId , string name , string description  , double price) : base(menuItemId)
-        {
-            Name = name ;
-            Description = description; 
-            Price= price ; 
-        }
+      
 
         public string Name { get;  }
         public string Description { get;  }
 
-        public double Price { get; }
+        // public double Price { get; }
+
+          private MenuItem(MenuItemId menuItemId , string name , string description  /*, double price*/) : base(menuItemId)
+        {
+            Name = name ;
+            Description = description; 
+            // Price= price ; 
+        }
+
+        public static MenuItem Create(
+            string name, 
+            string description
+           // double price
+        )
+        {
+            return new(
+                MenuItemId.CreateUnique(),
+                name,
+                description
+                //price
+            );
+        }
+
+
 
         
 

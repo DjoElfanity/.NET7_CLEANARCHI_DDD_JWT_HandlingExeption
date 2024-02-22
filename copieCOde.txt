@@ -1,0 +1,619 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using BuberDinner.Domain.Menu;
+using BuberDinner.Domain.Menu.Entities;
+using ErrorOr;
+using MediatR;
+
+namespace BuberDinner.Application.Menus.Commands.CreateMenu
+{
+    public record CreateMenuCommand(
+
+      string Name ,
+      string Description , 
+      List<MenuSectionCommand> Sections,
+      string HostId      
+
+
+
+    )  :IRequest<ErrorOr<Menu>>;
+
+        public record MenuSectionCommand(
+        string Name, 
+        string Descriptions,
+        List<MenuItemCommand> Items
+    );
+
+    public record MenuItemCommand(
+        string Name,
+        string Description
+    );
+    
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using BuberDinner.Application.Common.Interfaces.Persistence;
+using BuberDinner.Domain.Menu;
+using BuberDinner.Domain.Menu.Entities;
+using BuberDinner.Domain.Menu.ValueObjects;
+using ErrorOr;
+using MediatR;
+
+namespace BuberDinner.Application.Menus.Commands.CreateMenu
+{
+    public class CreateMenuCommandHandler : IRequestHandler<CreateMenuCommand, ErrorOr<Menu>>
+    {
+        private readonly IMenuRepository _menuRepository;
+
+        public CreateMenuCommandHandler(IMenuRepository menuRepository)
+        {
+            _menuRepository = menuRepository;
+        }
+
+        public async  Task<ErrorOr<Menu>> Handle(CreateMenuCommand request, CancellationToken cancellationToken)
+        {
+            await Task.CompletedTask;
+            //Create Menu 
+            var menu = Menu.Create(
+                hostId : HostId.Create(request.HostId),
+                request.Name,
+                request.Description,
+                request.Sections.ConvertAll(section => MenuSection.Create(
+                    section.Name,
+                    section.Descriptions,
+                    section.Items.ConvertAll(item =>MenuItem.Create(
+                        item.Name,
+                        item.Description
+                        
+                    )
+                        
+                    )
+
+                ))
+
+
+            );
+
+            //Persistence Menu
+
+            _menuRepository.Add(menu);
+
+
+
+
+            //Return Menu 
+
+            return menu; 
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using FluentValidation;
+
+namespace BuberDinner.Application.Menus.Commands.CreateMenu
+{
+    public class CreateMenuCommandValidator : AbstractValidator<CreateMenuCommand>
+{
+    public CreateMenuCommandValidator()
+    {
+        RuleFor(command => command.Name).NotEmpty();
+        RuleFor(command => command.Description).NotEmpty();
+        RuleFor(command => command.Sections).NotEmpty();
+        RuleFor(command => command.HostId).NotEmpty();
+    }
+}
+
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+
+namespace BuberDinner.Contracts.Menus
+{
+    public record CreateMenuRequest
+    (
+        string Name, 
+        string Description,
+        List<MenuSection> Sections         
+    );
+
+    public record MenuSection(
+        string Name, 
+        string Descriptions,
+        List<MenuItem> Items
+    );
+
+    public record MenuItem(
+        string Name,
+        string Description
+    );
+    
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace BuberDinner.Contracts.Menus
+{
+    public record MenuResponse(
+
+
+        string Id,
+        string Name , 
+        string Description,
+        float? AverageRating,
+        List<MenuSectionResponse> Sections ,
+        string HostId,
+        List<string>DinerIds, 
+        List<string>MenuReviewsIds,
+        DateTime CreatedDateTime,
+        DateTime UpdatedDateTime
+        
+    ); 
+
+    public record MenuSectionResponse(
+            string Id,
+            string Name ,
+            string Description,
+            List<MenuItemResponse> Items
+
+    );
+
+
+    public record MenuItemResponse (
+            string Id,
+            string Name ,
+            string Description
+
+    );
+    
+        
+      
+
+
+    
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using AutoMapper;
+using BuberDinner.Application.Authentication.Commands;
+using BuberDinner.Application.Authentication.Common;
+using BuberDinner.Application.Menus.Commands.CreateMenu;
+using BuberDinner.Contracts.Authentication;
+using BuberDinner.Contracts.Menus;
+using BuberDinner.Domain.Entities;
+using BuberDinner.Domain.Menu;
+
+
+
+namespace dotnet_test.Mapping
+{
+    public class MappingProfile : Profile
+{
+    public MappingProfile()
+    {
+        CreateMap<RegisterRequest, RegisterCommand>();
+            CreateMap<LoginRequest, LoginQuery>();
+            CreateMap<AuthenticationResult, AuthenticationResponse>();
+            
+            // Mappage pour la création de menu
+            CreateMap<CreateMenuRequest, CreateMenuCommand>()
+                .ForMember(dest => dest.Sections, opt => opt.MapFrom(src => src.Sections));
+            
+            // Mappages pour les entités et les réponses de menu
+            CreateMap<Menu, MenuResponse>()
+                .ForMember(dest => dest.Sections, opt => opt.MapFrom(src => src.Sections));
+
+            // Mappage pour les sections de menu
+            CreateMap<MenuSection, MenuSectionCommand>()
+                .ForMember(dest => dest.Items, opt => opt.MapFrom(src => src.Items));
+
+            // Mappage pour les items de menu
+            CreateMap<MenuItem, MenuItemCommand>();
+
+            // Si vous avez des types spécifiques pour les requêtes/DTOs entrants pour les sections et les items,
+            // vous devrez également les mapper ici. Par exemple:
+            CreateMap<MenuSection, MenuSectionCommand>()
+                .ForMember(dest => dest.Items, opt => opt.MapFrom(src => src.Items));
+            CreateMap<MenuItem, MenuItemCommand>();
+
+      
+
+        
+       
+        
+
+    }
+}
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using BuberDinner.Domain.Common.Models;
+using BuberDinner.Domain.Menu.ValueObjects;
+
+namespace BuberDinner.Domain.Menu.Entities
+{
+    public sealed class MenuItem : Entity<MenuItemId>
+    {
+      
+
+        public string Name { get;  }
+        public string Description { get;  }
+
+        // public double Price { get; }
+
+          private MenuItem(MenuItemId menuItemId , string name , string description  /*, double price*/) : base(menuItemId)
+        {
+            Name = name ;
+            Description = description; 
+            // Price= price ; 
+        }
+
+        public static MenuItem Create(
+            string name, 
+            string description
+           // double price
+        )
+        {
+            return new(
+                MenuItemId.CreateUnique(),
+                name,
+                description
+                //price
+            );
+        }
+
+
+
+        
+
+
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using BuberDinner.Domain.Common.Models;
+using BuberDinner.Domain.Menu.ValueObjects;
+
+namespace BuberDinner.Domain.Menu.Entities
+{
+    public sealed class MenuSection : Entity<MenuSectionId>
+    {
+        public MenuSection(MenuSectionId menuSectionId, string name, string description, List<MenuItem> items) 
+            : base(menuSectionId)
+        {
+            Name = name;
+            Description = description;
+            _items = items ?? new List<MenuItem>(); // Initialise _items avec la liste fournie ou une nouvelle liste si null
+        }
+        private readonly List<MenuItem> _items = new();
+        public string Name { get; }
+        public string Description { get; }
+
+        IReadOnlyList<MenuItem> Items => _items.ToList();
+
+         public static MenuSection Create(
+            string name,
+            string description,
+            List<MenuItem> items // Ajouter des items comme paramètre
+        )
+        {
+            return new MenuSection(
+                MenuSectionId.CreateUnique(),
+                name,
+                description,
+                items // Passer les items au constructeur
+            );
+        }
+    
+
+
+
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using BuberDinner.Domain.Common.Models;
+
+namespace BuberDinner.Domain.Menu.ValueObjects
+{
+    public sealed class MenuId : ValueObject
+    {
+        public Guid Value {get; }
+
+        private MenuId(Guid value) {
+            Value = value; 
+
+        }
+
+        public static MenuId CreateUnique()
+        {
+            return new (Guid.NewGuid());
+        }
+
+        public override IEnumerable<object> GetEqualityComponents()
+        {
+            yield return Value ; 
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using BuberDinner.Domain.Common.Models;
+
+namespace BuberDinner.Domain.Menu.ValueObjects
+{
+    public sealed class MenuItemId : ValueObject
+    {
+        public Guid Value {get; }
+
+        private MenuItemId(Guid value) {
+            Value = value; 
+
+        }
+
+        public static MenuItemId CreateUnique()
+        {
+            return new (Guid.NewGuid());
+        }
+
+        public override IEnumerable<object> GetEqualityComponents()
+        {
+            yield return Value ; 
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using BuberDinner.Domain.Common.Models;
+
+namespace BuberDinner.Domain.Menu.ValueObjects
+{
+    public sealed class MenuSectionId : ValueObject
+    {
+        public Guid Value {get; }
+
+        private MenuSectionId(Guid value) {
+            Value = value; 
+
+        }
+
+        public static MenuSectionId CreateUnique()
+        {
+            return new (Guid.NewGuid());
+        }
+
+        public override IEnumerable<object> GetEqualityComponents()
+        {
+            yield return Value ; 
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using BuberDinner.Domain.Common.Models;
+using BuberDinner.Domain.Menu.Entities;
+using BuberDinner.Domain.Menu.ValueObjects;
+
+namespace BuberDinner.Domain.Menu
+{
+    public sealed class Menu : AggregateRoot<MenuId>
+    {
+        private readonly List<MenuSection> _sections = new();
+        private readonly List<DinnerId> _dinnerIds = new(); // Assurez-vous d'avoir cette liste
+        private readonly List<MenuReviewId> _menuReviewIds = new();
+
+        public string Name { get; }
+        public string Description { get; }
+        // Supposé que AverageRating sera calculé ou mis à jour séparément
+        public float AverageRating { get; private set; }
+
+        public IReadOnlyList<MenuSection> Sections => _sections.AsReadOnly();
+        public IReadOnlyList<DinnerId> DinnerIds => _dinnerIds.AsReadOnly();
+        public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
+        // Les propriétés DinnerIds et MenuReviewIds sont retirées pour simplifier l'exemple
+        public DateTime CreatedDateTime { get; private set; }
+        public DateTime UpdatedDateTime { get; private set; }
+        public HostId HostId { get; }
+
+        private Menu(
+            MenuId menuId,
+            string name,
+            string description,
+            HostId hostId,
+            List<MenuSection> sections,
+            DateTime createdDateTime,
+            DateTime updatedDateTime
+        ) : base(menuId)
+        {
+            Name = name;
+            Description = description;
+            HostId = hostId;
+            _sections = sections ?? new List<MenuSection>();
+            CreatedDateTime = createdDateTime;
+            UpdatedDateTime = updatedDateTime;
+        }
+
+        public static Menu Create(
+            HostId hostId,
+            string name,
+            string description,
+            List<MenuSection> sections
+        )
+        {
+            // Assurez-vous que les sections ne sont pas nulles avant de les passer
+            sections = sections ?? new List<MenuSection>();
+            return new Menu(
+                MenuId.CreateUnique(),
+                name,
+                description,
+                hostId,
+                sections,
+                DateTime.UtcNow, // Utilisez DateTime.UtcNow pour initialiser les dates de création et de mise à jour
+                DateTime.UtcNow
+            );
+        }
+    }
+}
+
+
+HOST : 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using BuberDinner.Domain.Common.Models;
+
+namespace BuberDinner.Domain.Menu.ValueObjects
+{
+    public sealed class HostId : ValueObject
+    {
+        public Guid Value {get; }
+
+        private HostId(Guid value) {
+            Value = value; 
+
+        }
+
+         public static HostId Create(string value)
+        {
+            // Assurez-vous que la valeur peut être convertie en Guid
+            if (!Guid.TryParse(value, out Guid guidValue))
+            {
+                throw new ArgumentException("Invalid GUID string passed to HostId.Create");
+            }
+            return new HostId(guidValue);
+        }
+
+        public static HostId CreateUnique()
+        {
+            return new (Guid.NewGuid());
+        }
+
+        public override IEnumerable<object> GetEqualityComponents()
+        {
+            yield return Value ; 
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using BuberDinner.Domain.Common.Models;
+using BuberDinner.Domain.Menu.ValueObjects;
+
+namespace BuberDinner.Domain.Host
+{
+    public class Host: AggregateRoot<HostId>
+    {
+
+        // private readonly UserId _userId; 
+        private readonly List<MenuId> _menuIds = new ();
+        private readonly List<DinnerId> _dinnerIds = new ();
+        public string FirstName {get ; set;}   = null!; 
+        public string Lastname {get ; set;}   = null!; 
+            
+        public string ProfileImage{get;}
+
+        public UserId UserId {get;}
+
+        public IReadOnlyList<MenuId> MenuId => _menuIds.ToList() ; 
+        public IReadOnlyList<DinnerId> DinnerId => _dinnerIds.ToList() ; 
+
+        public DateTime CreatedDateTime { get; }
+        public DateTime UpdatedDateTime { get; }
+        public float AverageRating{get;}
+
+
+        private Host(
+        HostId hostId ,
+        UserId userId, 
+        string firstname,
+        string lastname , 
+        string profileImage , 
+        DateTime createdDateTime,
+        DateTime updatedDateTime
+
+
+        ) : base(hostId)
+
+        {
+            FirstName = firstname;
+            Lastname = lastname ;
+            UserId = userId; 
+            ProfileImage = profileImage ;
+            AverageRating = 0;
+            CreatedDateTime = createdDateTime;
+            UpdatedDateTime = updatedDateTime;
+           
+             
+        }
+
+        public static Host Create
+        (
+        string firstname,
+        string lastname , 
+        string profileImage  ,
+        UserId userId  
+
+        )
+        {
+            return new Host(
+                HostId.CreateUnique(),
+                userId,
+                firstname,
+                lastname , 
+                profileImage ,
+                DateTime.UtcNow,
+                DateTime.UtcNow
+            );
+        }
+
+        
+
+
+
+
+
+
+        
+    }
+}

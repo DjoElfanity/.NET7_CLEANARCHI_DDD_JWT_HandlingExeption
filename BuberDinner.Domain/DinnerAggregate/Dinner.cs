@@ -13,7 +13,7 @@ namespace BuberDinner.Domain.Dinner
     {
         private readonly List<DinnerReservation> _reservations = new();
 
-        public IReadOnlyList<DinnerReservation> Reservations => _reservations.ToList();
+        public IReadOnlyList<DinnerReservation> Reservations => _reservations.AsReadOnly();
 
         public string Name { get; }
         public string Description { get; }

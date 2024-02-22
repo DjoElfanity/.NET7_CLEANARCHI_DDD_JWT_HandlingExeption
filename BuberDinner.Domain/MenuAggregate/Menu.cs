@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using BuberDinner.Domain.Common.Models;
 using BuberDinner.Domain.Menu.Entities;
 using BuberDinner.Domain.Menu.ValueObjects;
@@ -11,61 +9,58 @@ namespace BuberDinner.Domain.Menu
     public sealed class Menu : AggregateRoot<MenuId>
     {
         private readonly List<MenuSection> _sections = new();
-        private readonly List<DinnerId> _dinnerIds = new(); 
-
+        private readonly List<DinnerId> _dinnerIds = new(); // Assurez-vous d'avoir cette liste
         private readonly List<MenuReviewId> _menuReviewIds = new();
 
+        public string Name { get; }
+        public string Description { get; }
+        // Supposé que AverageRating sera calculé ou mis à jour séparément
+        public float AverageRating { get; private set; }
 
-        public string Name {get; }
-        public string Description {get; }
-        public float AverageRating  {get; }
+        public IReadOnlyList<MenuSection> Sections => _sections.AsReadOnly();
+        public IReadOnlyList<DinnerId> DinnerIds => _dinnerIds.AsReadOnly();
+        public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
+        // Les propriétés DinnerIds et MenuReviewIds sont retirées pour simplifier l'exemple
+        public DateTime CreatedDateTime { get; private set; }
+        public DateTime UpdatedDateTime { get; private set; }
+        public HostId HostId { get; }
 
-
-
-        IReadOnlyList<MenuSection> Sections => _sections.ToList();
-        IReadOnlyList<DinnerId> DinnerIds => _dinnerIds.ToList();
-        IReadOnlyList<MenuReviewId> MenuReviewIds =>_menuReviewIds.ToList();
-
-        public DateTime CreatedDateTime {get;}
-        public DateTime UpdatedDateTime {get;}
-        public HostId HostId {get;}
         private Menu(
-        MenuId menuId , 
-        string name , 
-        string description, 
-        HostId hostId, 
-        DateTime createdDateTime ,
-        DateTime updatedDateTime 
+            MenuId menuId,
+            string name,
+            string description,
+            HostId hostId,
+            // List<MenuSection> sections,
+            DateTime createdDateTime,
+            DateTime updatedDateTime
         ) : base(menuId)
         {
-        Name = name ;
-        Description = description ; 
-        HostId = hostId;
-        CreatedDateTime = createdDateTime ;
-        UpdatedDateTime = updatedDateTime ;  
-
+            Name = name;
+            Description = description;
+            HostId = hostId;
+            // _sections = sections ?? new List<MenuSection>();
+            CreatedDateTime = createdDateTime;
+            UpdatedDateTime = updatedDateTime;
         }
 
-
-         public static Menu Create(
-            string name, 
-            string description , 
-            HostId hostId
+        public static Menu Create(
+            HostId hostId,
+            string name,
+            string description,
+            List<MenuSection> sections
         )
         {
-            return new(
-            MenuId.CreateUnique(),
-            name,
-            description,
-            hostId,
-            DateTime.UtcNow,
-            DateTime.UtcNow
-        );
+            // Assurez-vous que les sections ne sont pas nulles avant de les passer
+            sections = sections ?? new List<MenuSection>();
+            return new Menu(
+                MenuId.CreateUnique(),
+                name,
+                description,
+                hostId,
+                // sections,
+                DateTime.UtcNow, // Utilisez DateTime.UtcNow pour initialiser les dates de création et de mise à jour
+                DateTime.UtcNow
+            );
         }
-        
-
-     
-        
     }
-   
 }

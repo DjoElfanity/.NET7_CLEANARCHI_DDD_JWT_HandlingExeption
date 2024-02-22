@@ -20,4 +20,11 @@ Cette semaine :
  Compréhension D'aggrégation,Entité et ValueObjects dans un projet
  Aggrégation : Bill , Dinner , Menu , User , Guest , MenuReview , Host
 
+ //Maintenant : Ajout mapping pour menuRequest et menuCommand et gestion handler 
+
+
+ //Probleme a regler  :
+
+ 
+
 continu : https://gist.github.com/amantinband/425ffc6b82e41610369e51e9d2827e4c

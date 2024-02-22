@@ -28,9 +28,12 @@ namespace BuberDinner.Infrastructure
             services.AddAuth(configuration);
             services.AddSingleton<IDateTimeProvider , DateTimeProvider>();
             services.AddScoped<IUserRepository , UserRepository>();
+            services.AddScoped<IMenuRepository , MenuRepository>();
              return services; 
 
             }
+
+
 
 
             public static  IServiceCollection AddAuth( this IServiceCollection services ,

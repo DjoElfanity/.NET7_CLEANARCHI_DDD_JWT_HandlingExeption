@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vWgGgYmwlxkUjAFwBqAWyvQCiNLi4nq8LbAtZDvh/aAe883IR1laqJF3PoPKF0THCQC9HQ/oGX7cOV6/Q6u41A==",
+  "dgSpecHash": "uDb1ztfMyKmZV2li/xLpf5pQh7V1wSrRhcNBHu8PVStU8Qme/U8yqlN9jLkC7+vHSlKXPBvDdkAlmWX1db53Gg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Api\\BuberDinner.Api.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,9 @@
     "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
+    "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
+    "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512",
+    "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\mapster.dependencyinjection\\1.0.1\\mapster.dependencyinjection.1.0.1.nupkg.sha512",
     "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

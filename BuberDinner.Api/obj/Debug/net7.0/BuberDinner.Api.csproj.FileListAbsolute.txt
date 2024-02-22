@@ -124,3 +124,6 @@ C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner
 C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Api\obj\Debug\net7.0\BuberDinner.Api.pdb
 C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Api\obj\Debug\net7.0\BuberDinner.Api.genruntimeconfig.cache
 C:\Users\KOROS\Desktop\JAD\.NET7_CLEANARCHI_DDD_JWT_HandlingExeption\BuberDinner.Api\obj\Debug\net7.0\ref\BuberDinner.Api.dll
+C:\Users\Jad.EL-FANITY\OneDrive - Akkodis\Desktop\DOT NET\CleanArchitecture_DDD\BuberDinner\BuberDinner.Api\bin\Debug\net7.0\Mapster.dll
+C:\Users\Jad.EL-FANITY\OneDrive - Akkodis\Desktop\DOT NET\CleanArchitecture_DDD\BuberDinner\BuberDinner.Api\bin\Debug\net7.0\Mapster.Core.dll
+C:\Users\Jad.EL-FANITY\OneDrive - Akkodis\Desktop\DOT NET\CleanArchitecture_DDD\BuberDinner\BuberDinner.Api\bin\Debug\net7.0\Mapster.DependencyInjection.dll

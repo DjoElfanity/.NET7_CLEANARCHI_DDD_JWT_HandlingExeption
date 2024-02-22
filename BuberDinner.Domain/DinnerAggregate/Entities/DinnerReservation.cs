@@ -12,7 +12,7 @@ namespace BuberDinner.Domain.Menu.Entities
     public sealed class DinnerReservation : Entity<DinnerReservationId>
     {
 
-         readonly GuestId _guestId;
+        readonly GuestId _guestId;
         readonly BillId _billId;
 
                 public DinnerReservation(

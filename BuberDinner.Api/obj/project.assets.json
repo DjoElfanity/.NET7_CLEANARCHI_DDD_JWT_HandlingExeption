@@ -3529,8 +3529,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj": {
-              "projectPath": "c:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj"
+            "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj": {
+              "projectPath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj"
             },
             "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Contracts\\BuberDinner.Contracts.csproj": {
               "projectPath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Contracts\\BuberDinner.Contracts.csproj"

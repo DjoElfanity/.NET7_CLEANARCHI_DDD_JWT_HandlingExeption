@@ -17,25 +17,6 @@ using MenuItem = BuberDinner.Domain.Menu.Entities.MenuItem;
 
 
 
-/*
-CreateMap<Menu, MenuResponse>()
-    .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id.Value))
-    .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
-    .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
-    .ForMember(dest => dest.AverageRating, opt => opt.MapFrom(src => src.AverageRating))
-    .ForMember(dest => dest.HostId, opt => opt.MapFrom(src => src.HostId.Value))
-    .ForMember(dest => dest.Sections, opt => opt.MapFrom(src => src.Sections.Select(s => new MenuSectionResponse(
-        s.Id.Value.ToString(), // Access the value of MenuSectionId
-        s.Name,
-        s.Description,
-        s.Items.Select(i => new MenuItemResponse(
-            i.Id.Value.ToString(), // Access the value of MenuItemId
-            i.Name,
-            i.Description
-        )).ToList()
-    )).ToList()));
-
-*/
 
 namespace dotnet_test.Mapping
 {

@@ -32,4 +32,7 @@ Cette semaine :
  //Probleme regler : Automapper fonctionne correctement sauf qu il ne montre pas l 'id de lasection et les items de la sections ne sont pas encore visible
 
 
+//Probleme Résolue : Autommapper de menu fonctionnel etles IDS Correspondent ainsi que la liste des items qui s'affiche
+
+
 continu : https://gist.github.com/amantinband/425ffc6b82e41610369e51e9d2827e4c

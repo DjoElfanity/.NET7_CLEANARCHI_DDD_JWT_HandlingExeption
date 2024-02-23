@@ -18,6 +18,7 @@ namespace BuberDinner.Application.Menus.Commands.CreateMenu
 
 
 
+
     )  :IRequest<ErrorOr<Menu>>;
 
         public record MenuSectionCommand(

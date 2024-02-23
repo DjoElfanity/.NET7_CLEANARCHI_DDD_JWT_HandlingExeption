@@ -22,7 +22,7 @@ namespace BuberDinner.Api.Controllers
             var (statusCode , message) =  exception switch 
             {
                 IServiceException serviceException => ((int)serviceException.StatusCode , serviceException.ErrorMessage ),
-                _ => (StatusCodes.Status500InternalServerError , "An unexpected error occured"),
+                _ => (StatusCodes.Status500InternalServerError , "An unexpected error occurred. Please try again later."),
             };
             return Problem( statusCode: statusCode  , title : message);
         }

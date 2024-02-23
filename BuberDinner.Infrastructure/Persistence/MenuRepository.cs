@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BuberDinner.Application.Common.Interfaces.Persistence;
+using BuberDinner.Domain.Common.Menu;
 using BuberDinner.Domain.Menu;
 
 namespace BuberDinner.Infrastructure.Persistence

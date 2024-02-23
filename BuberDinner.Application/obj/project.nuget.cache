@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pDBmso8ERFQ2i1Y86dz+A9L9J+rhuK30aLS7+rLuAA5Ob1WhQfS8J8RMcNYBN8c59IZZClu12AEs+vcKQkB2gw==",
+  "dgSpecHash": "t4TTgN0iQquSEGdHff1zxpt2N6CiM1YjcSzg+v7RzbWHk65rg+HId7UYcAtdEmGx3z7vMQj29pg5DPXQ/YOpDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj",
+  "projectFilePath": "c:\\Users\\Jad.EL-FANITY\\OneDrive - Akkodis\\Desktop\\DOT NET\\CleanArchitecture_DDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\erroror\\1.10.0\\erroror.1.10.0.nupkg.sha512",
     "C:\\Users\\Jad.EL-FANITY\\.nuget\\packages\\fluentresults\\3.15.2\\fluentresults.3.15.2.nupkg.sha512",

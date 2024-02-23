@@ -1,35 +1,38 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BuberDinner.Domain.Menu;
-using BuberDinner.Domain.Menu.Entities;
+using BuberDinner.Domain.Common.Menu;
 using ErrorOr;
 using MediatR;
 
 namespace BuberDinner.Application.Menus.Commands.CreateMenu
 {
-    public record CreateMenuCommand(
+    public record CreateMenuCommand : IRequest<ErrorOr<Menu>>
+    {
+        public string HostId { get; init; } = default!;
+        public string Name { get; init; }= default!;
+        public string Description { get; init; }= default!;
+        public List<MenuSectionCommand> Sections { get; init; }= default!;
 
-      string Name ,
-      string Description , 
-      
-      List<MenuSectionCommand> Sections,
-      string HostId       
+        public CreateMenuCommand() { }
 
+        public CreateMenuCommand(string hostId, string name, string description, List<MenuSectionCommand> sections)
+        {
+            HostId = hostId;
+            Name = name;
+            Description = description;
+            Sections = sections;
+        }
+    }
 
-
-    )  :IRequest<ErrorOr<Menu>>;
-
-        public record MenuSectionCommand(
-        string Name, 
-        string Descriptions,
+    public record MenuSectionCommand
+    (
+        string Name,
+        string Description,
         List<MenuItemCommand> Items
     );
 
-    public record MenuItemCommand(
+    public record MenuItemCommand
+    (
         string Name,
         string Description
     );
-    
 }

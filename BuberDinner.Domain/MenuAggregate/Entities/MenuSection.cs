@@ -9,18 +9,22 @@ namespace BuberDinner.Domain.Menu.Entities
 {
     public sealed class MenuSection : Entity<MenuSectionId>
     {
+
+        
         public MenuSection(MenuSectionId menuSectionId, string name, string description, List<MenuItem> items) 
             : base(menuSectionId)
         {
+
             Name = name;
             Description = description;
             _items = items ?? new List<MenuItem>(); // Initialise _items avec la liste fournie ou une nouvelle liste si null
         }
         private  readonly List<MenuItem> _items = new();
+        
         public string Name { get; }
         public string Description { get; }
 
-        IReadOnlyList<MenuItem> Items => _items.ToList();
+        public  IReadOnlyList<MenuItem> Items => _items.ToList();
 
          public static MenuSection Create(
             string name,

@@ -35,6 +35,7 @@ namespace BuberDinner.Contracts.Menus
             HostId = hostId;
             DinerIds = dinerIds ?? new List<string>();
             MenuReviewsIds = menuReviewsIds ?? new List<string>();
+            
             CreatedDateTime = createdDateTime;
             UpdatedDateTime = updatedDateTime;
         }

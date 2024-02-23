@@ -28,7 +28,7 @@ builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.AddControllers();
-// builder.Services.AddAutoMapper(typeof(MappingProfile));
+//builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddSingleton(profiler => new MapperConfiguration(cfg => {
     cfg.AddProfile<MappingProfile>();
 }).CreateMapper(

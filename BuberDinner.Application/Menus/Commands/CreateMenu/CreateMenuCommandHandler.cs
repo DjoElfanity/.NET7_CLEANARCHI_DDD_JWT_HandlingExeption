@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BuberDinner.Application.Common.Interfaces.Persistence;
+using BuberDinner.Domain.Common.Menu;
 using BuberDinner.Domain.Menu;
 using BuberDinner.Domain.Menu.Entities;
 using BuberDinner.Domain.Menu.ValueObjects;
@@ -21,6 +22,7 @@ namespace BuberDinner.Application.Menus.Commands.CreateMenu
         }
 
         public async  Task<ErrorOr<Menu>> Handle(CreateMenuCommand request, CancellationToken cancellationToken)
+
         {
             await Task.CompletedTask;
             //Create Menu 
@@ -30,13 +32,13 @@ namespace BuberDinner.Application.Menus.Commands.CreateMenu
                 request.Description,
                 request.Sections.ConvertAll(section => MenuSection.Create(
                     section.Name,
-                    section.Descriptions,
+                    section.Description,
                     section.Items.ConvertAll(item =>MenuItem.Create(
                         item.Name,
                         item.Description
                         
                     )
-                        
+                    
                     )
 
                 ))
